@@ -12,7 +12,7 @@ interface IAppRepository {
 
     fun createBankUser(data: BankUserRequest): Flow<Resource<BankUser>>
 
-    fun updateBankUser(data: BankUser): Flow<Resource<BankUser>>
+    fun updateBankUser(data: BankUserRequest): Flow<Resource<BankUser>>
 
     fun deleteBankUser(data: BankUser): Flow<Resource<BankUser>>
 

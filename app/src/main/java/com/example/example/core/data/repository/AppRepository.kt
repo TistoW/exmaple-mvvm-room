@@ -45,7 +45,7 @@ class AppRepository(val local: LocalDataSource, val remote: RemoteDataSource) : 
         }
     }.asFlow().flowOn(Dispatchers.IO)
 
-    override fun updateBankUser(data: BankUser) = object : ResponseHandler<BankUser, DataResponse<BankUser>>() {
+    override fun updateBankUser(data: BankUserRequest) = object : ResponseHandler<BankUser, DataResponse<BankUser>>() {
         override suspend fun createCall(): Response<DataResponse<BankUser>> {
             return remote.updateBankUser(data)
         }

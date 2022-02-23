@@ -34,4 +34,34 @@
         <item name="boxBackgroundColor">@color/grey1</item>
     </style>
 
+    <style name="editTextEntryName">
+        <item name="android:maxLines">1</item>
+        <item name="android:lines">1</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="CustomBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize|stateVisible</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_dialog</item>
+    </style>
+
+    <style name="TypographyStyles.Default" parent="TypographyStyles.Text3" />
+
+    <style name="TypographyStyles.Default.Bold" parent="TypographyStyles.TextParent">
+        <item name="fontFamily">@font/worksans_semibold</item>
+        <item name="android:fontFamily">@font/worksans_semibold</item>
+    </style>
+
 </resources>

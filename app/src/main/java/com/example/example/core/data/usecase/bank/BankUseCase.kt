@@ -13,5 +13,5 @@ interface BankUseCase {
 
     fun create(data: BankUserRequest): Flow<Resource<BankUser>>
 
-    fun update(data: BankUser): Flow<Resource<BankUser>>
+    fun update(data: BankUserRequest): Flow<Resource<BankUser>>
 }

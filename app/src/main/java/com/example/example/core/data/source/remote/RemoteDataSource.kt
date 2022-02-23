@@ -16,6 +16,6 @@ class RemoteDataSource(private val api: ApiService) {
 
     suspend fun createBankUser(data: BankUserRequest) = api.createBankUser(data)
 
-    suspend fun updateBankUser(data: BankUser) = api.updateBankUser(data.id, data)
+    suspend fun updateBankUser(data: BankUserRequest) = api.updateBankUser(data.id, data)
 
 }

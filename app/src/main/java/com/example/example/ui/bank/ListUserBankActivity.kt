@@ -61,7 +61,7 @@ class ListUserBankActivity : BaseActivity() {
 
         binding.divToolbar.btnToolbarImage.toVisible()
         binding.divToolbar.btnToolbarImage.setOnClickListener {
-//            intentActivity(TambahBankUserActivity::class.java)
+            intentActivity(TambahBankUserActivity::class.java)
         }
     }
 
@@ -76,8 +76,8 @@ class ListUserBankActivity : BaseActivity() {
 
                     listItem = body as ArrayList
                     binding.tvError.visible(body.isEmpty())
-                    binding.divCatatan.visible(body.isNotEmpty())
                     adapter.addItem(body)
+//                    binding.divCatatan.visible(body.isNotEmpty())
 //                    binding.divToolbar.btnToolbarImage.visible(body.size <= 2)
                 }
                 State.ERROR -> {
@@ -121,7 +121,7 @@ class ListUserBankActivity : BaseActivity() {
     private val adapter = BankUserAdapter()
     private fun displayData() {
         adapter.onClick = {
-
+            intentActivity(DetailBankUserActivity::class.java, it.toJson())
         }
         adapter.onDelete = { it, i ->
             deleteBank(it, i)

@@ -14,6 +14,6 @@ class BankInteractor(private val repo: IAppRepository) : BankUseCase {
 
     override fun create(data: BankUserRequest): Flow<Resource<BankUser>> = repo.createBankUser(data)
 
-    override fun update(data: BankUser): Flow<Resource<BankUser>> = repo.updateBankUser(data)
+    override fun update(data: BankUserRequest): Flow<Resource<BankUser>> = repo.updateBankUser(data)
 
 }

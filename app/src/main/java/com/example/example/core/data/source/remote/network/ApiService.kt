@@ -27,7 +27,7 @@ interface ApiService {
     @PUT("bank-user/{id}")
     suspend fun updateBankUser(
         @Path("id") id: Int? = null,
-        @Body bankUser: BankUser
+        @Body bankUser: BankUserRequest
     ): Response<DataResponse<BankUser>>
 
     @DELETE("bank-user/{id}")

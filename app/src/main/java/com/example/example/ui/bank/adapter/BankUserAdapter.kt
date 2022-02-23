@@ -75,7 +75,7 @@ class BankUserAdapter(var onClick: ((data: BankUser) -> Unit?)? = null) : Recycl
                     root.context.popUpMenu(view, menus) {
                         when (it) {
                             "Hapus" -> onDelete?.invoke(a, adapterPosition)
-                            "Detail" -> onDelete?.invoke(a, adapterPosition)
+                            "Detail" -> onClick?.invoke(a)
                         }
                     }
                 }

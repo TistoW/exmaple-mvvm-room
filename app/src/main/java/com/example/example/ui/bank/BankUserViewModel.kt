@@ -18,6 +18,6 @@ class BankUserViewModel(private val usecase: BankUseCase) : ViewModel() {
 
     fun create(data: BankUserRequest) = usecase.create(data).asLiveData()
 
-    fun update(data: BankUser) = usecase.update(data).asLiveData()
+    fun update(data: BankUserRequest) = usecase.update(data).asLiveData()
 
 }
